@@ -82,19 +82,25 @@ function! SensibleInsert()
 endfunction
 
 " So if wasd is the cursor, then e and q are interaction keys.
-" e trigger insert mode
+" e triggers insert mode, as does CR
 " q toggles between normal and visual mode
 
 nnoremap e :call SensibleInsert()<CR>
 vnoremap e :call SensibleInsert()<CR>
 nnoremap q v
 vnoremap q <esc>
+nnoremap <CR> :call SensibleInsert()<CR>
+vnoremap <CR> "zd:call SensibleInsert()<CR>
 
-" Starting to type by adding a CR is a common enough use case
-nnoremap <CR> :call SensibleInsert()<CR><CR>
-vnoremap <CR> "zd:call SensibleInsert()<CR><CR>
+" Ctrl+e, Ctrl+q likely to be used to toggle
+inoremap <C-e> <Esc>
+inoremap <C-q> v
+nnoremap <C-e> :call SensibleInsert()<CR>
+vnoremap <C-e> :call SensibleInsert()<CR>
+nnoremap <C-q> v
+vnoremap <C-q> <esc>
 
-" Browsers do this, less does this. But in vim, space means cursor right.
+" Browsers do this, less does this. But in vim, space means cursor right. Annoyingly, shift-space doesn't seem to be picked up.
 nnoremap <space> <PageDown>
 nnoremap <S-space> <PageUp>
 
@@ -157,9 +163,6 @@ vnoremap <v> "zdPl
 vnoremap <C-x> dgv
 vnoremap <C-c> ygv
 vnoremap <C-v> "zdPl
-
-inoremap <C-e> v
-inoremap <C-q> v
 
 inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
