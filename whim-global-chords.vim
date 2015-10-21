@@ -18,11 +18,19 @@ nnoremap <leader>.zzz <C-Z>
 
 " Ctrl+F is find. Ctrl+G is go to line. Ctrl+H is replace. We hold these truths to be self-evident.
 
-noremap <C-f> <Esc>//gi<Left><Left><Left>
+noremap  <C-f> <Esc>//gi<Left><Left><Left>
 inoremap <C-f> <Esc>//gi<Left><Left><Left>
-noremap <C-g> <Esc>:
-noremap <C-h> <Esc>:%s///gic<Left><Left><Left><Left><Left>
+vnoremap <C-f> ://gi<Left><Left><Left>
+
+noremap  <C-h> <Esc>:%s///gic<Left><Left><Left><Left><Left>
 inoremap <C-h> <Esc>:%s///gic<Left><Left><Left><Left><Left>
+vnoremap <C-h> :s///gic<Left><Left><Left><Left><Left>
+
+noremap  <C-g> <Esc>:
+inoremap <C-g> <Esc>:
+
+noremap <F3> <Esc>:nohlsearch<CR>
+inoremap <F3> <Esc>:nohlsearch<CR>i
 
 " Ctrl+space for autocomplete
 inoremap <C-@> <C-x><C-o>
