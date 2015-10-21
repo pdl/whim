@@ -11,14 +11,14 @@ imap ,. ,,,.
 
 " Leader plus dot is a way to access menu shortcuts (Alt+f, X type thing) even when your alt key won't work.
 
-noremap <leader>.fo <esc>:find
-noremap <leader>.fs <esc>:w
+noremap <leader>.fo <esc>:find<Space>
+noremap <leader>.fs <esc>:w<Space>
 noremap <leader>.fd <esc>:w !diff % -<CR>
-noremap <leader>.fa <esc>:w
-noremap <leader>.fc <esc>:q<CR>
-noremap <leader>.fc<CR> <esc>:q!<CR>
-noremap <leader>.fx <esc>:qa<CR>
-noremap <leader>.fx<CR> <esc>:qa!<CR>
+noremap <leader>.fa <esc>:w<Space>
+noremap <leader>.fc <esc>:confirm quit<CR>
+noremap <leader>.fx <esc>:confirm quitall<CR>
+noremap <leader>.fc<CR> <esc>:confirm quit<CR>
+noremap <leader>.fx<CR> <esc>:confirm quitall<CR>
 noremap <leader>.fz <esc><C-Z>
 
 noremap <leader>.ec <esc>Vy
@@ -43,7 +43,7 @@ noremap <leader>.es` <esc>vi`
 
 vnoremap <leader>.etcu Ugv
 vnoremap <leader>.etcl ugv
-"vnoremap <leader>.etcs s/([- ]|)/_/g<nop>gv
+"vnoremap <leader>.etcs :s/([- ]|)/_/g<CR>gv
 vnoremap <leader>.etcl ugv
 
 noremap <leader>.vpe <esc>:find $MYVIMRC<CR>
