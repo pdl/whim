@@ -2,12 +2,14 @@
 " Nobody really needs to type two commas in a row. Use that to get out of insert mode instead.
 inoremap ,, <esc>
 vnoremap ,, <esc>
+cnoremap ,, <esc>
 
 " In normal mode, single comma does mapleader.
 let mapleader = ","
 
 " OK, so this is going to get you out of insert mode and then do leader plus dot.
 imap ,. ,,,.
+cmap ,. ,,,.
 
 " Leader plus dot is a way to access menu shortcuts (Alt+f, X type thing) even when your alt key won't work.
 
