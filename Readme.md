@@ -12,7 +12,7 @@ I really like being able to write and edit files in a terminal sessions.
 
 I am also rather accustomed to GUI conventions, specifically, Notepad++ on Windows (and sometimes WINE), more recently Atom on GNOME.
 
-`nano` is perfectly capable for quick work. I even got it to do a decent job of syntax-highlighting Perl5. But I really want to be able to do more with it. I also dislike its keybindings. `vim` seems to have most of the features I want - but I am not able to access them.
+`nano` is perfectly capable for quick work. I even got it to do a decent job of syntax-highlighting Perl5. But I really want to be able to do more with it. I also dislike its keybindings. `vim` seems to have most of the features I want - but I am not able to access them. Its keybindings are even worse.
 
 `vim` is a powerful text editor with an enduring appeal.
 
