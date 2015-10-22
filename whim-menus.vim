@@ -55,9 +55,12 @@ noremap <leader>.vmn <esc>
 noremap <leader>.vmc <esc>:
 noremap <leader>.vmb <esc><C-V>
 
-noremap <leader>.g <esc>:!git
-noremap <leader>.gs <esc>:!git status
-noremap <leader>.gda <esc>:!git diff
+noremap <leader>.g    <esc>:!git<Space>
+noremap <leader>.gs   <esc>:!git status<Space>
+noremap <leader>.gda  <esc>:!git diff<Space>
+noremap <leader>.gdf  <esc>:!git diff -- %<Space>
+noremap <leader>.grah <esc>:!git reset --hard HEAD
+noremap <leader>.grf  <esc>:!git checkout %<Space>
 
 " move between tabs with []
 " ctrl+tab doesn't register as different from tab. ctrl+[ is esc.
