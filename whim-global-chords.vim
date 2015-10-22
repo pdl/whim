@@ -34,3 +34,7 @@ inoremap <F3> <Esc>:nohlsearch<CR>i
 
 " Ctrl+space for autocomplete
 inoremap <C-@> <C-x><C-o>
+
+" m to merge lines
+vnoremap m      :s/\(\n[\x20\x09]*\)\{1,}/ /g<CR>:nohlsearch<CR>
+nnoremap m     V:s/\(\n[\x20\x09]*\)\{1,}/ /g<CR>:nohlsearch<CR>
