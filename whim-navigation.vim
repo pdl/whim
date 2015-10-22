@@ -140,6 +140,8 @@ vnoremap <S-l> "zd`<l"zP`<lv`>l
 " This is a computer, not a typewriter: backspaces deletes the previous character.
 nnoremap <BS> "zdhi
 vnoremap <BS> "zdhli
+nnoremap <Del> <Del>i
+vnoremap <Del> <Del>i
 
 " Copy and paste
 " Linewise if nothing is selected
@@ -188,7 +190,9 @@ nnoremap <S-s> <esc>vg<Down><Left>
 noremap <C-Left> <S-Left>
 noremap <C-Right> <S-Right>
 
-inoremap <C-BS> <C-W>
+inoremap <C-BS>   "zdb
+inoremap <C-kDel> "zdw
+nnoremap <C-kDel> "zdw
 
 inoremap <C-p> <esc>viW
 inoremap <C-p><C-p> <esc>viw
